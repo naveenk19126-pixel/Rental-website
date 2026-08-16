@@ -1,0 +1,224 @@
+.details-container {
+    padding: 70px 7%;
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 50px;
+    background: #f8fafc;
+}
+
+
+/* PRODUCT */
+
+.product-preview {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+}
+
+.large-product-image {
+    height: 400px;
+    background: #eff6ff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
+    position: relative;
+}
+
+.stock {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #dcfce7;
+    color: #15803d;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.product-description {
+    padding-top: 30px;
+}
+
+.product-description small {
+    color: #2563eb;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.product-description h1 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.rating {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.product-description > p:not(.rating) {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.features div {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+/* RENTAL BOX */
+
+.rental-box {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.rental-box h2 {
+    margin-bottom: 15px;
+}
+
+.price-display {
+    font-size: 32px;
+    font-weight: 800;
+    color: #2563eb;
+    margin-bottom: 25px;
+}
+
+.price-display span {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 400;
+}
+
+.date-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.date-row label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.date-row input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dbe2ea;
+    border-radius: 8px;
+    outline: none;
+}
+
+.availability {
+    background: #f0fdf4;
+    color: #15803d;
+    padding: 13px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.calculation {
+    margin-top: 20px;
+}
+
+.calculation > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.calculation span {
+    color: #64748b;
+}
+
+.calculation strong {
+    color: #172033;
+}
+
+.calculation hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 20px 0;
+}
+
+.calculation .total {
+    font-size: 20px;
+}
+
+.calculation .total strong {
+    color: #2563eb;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background: #1d4ed8;
+}
+
+
+@media (max-width: 900px) {
+
+    .details-container {
+        grid-template-columns: 1fr;
+        padding: 40px 5%;
+    }
+
+    .rental-box {
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .large-product-image {
+        height: 280px;
+        font-size: 100px;
+    }
+
+    .product-description h1 {
+        font-size: 30px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .date-row {
+        grid-template-columns: 1fr;
+    }
+
+}

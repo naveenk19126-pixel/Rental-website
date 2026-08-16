@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RentEase | Product Details</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>Rent</span>Ease
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="index.html#categories">Categories</a>
+        <a href="index.html#how-it-works">How It Works</a>
+    </nav>
+
+    <div class="nav-buttons">
+        <button class="login-btn">Login</button>
+        <button class="signup-btn">Sign Up</button>
+    </div>
+
+</header>
+
+
+<main class="details-container">
+
+    <!-- Product -->
+    <section class="product-preview">
+
+        <div class="large-product-image">
+            📷
+
+            <span class="stock">
+                ● Available
+            </span>
+        </div>
+
+        <div class="product-description">
+
+            <small>Electronics</small>
+
+            <h1>Canon Camera</h1>
+
+            <p class="rating">
+                ⭐ 4.8 &nbsp; | &nbsp; 124 Reviews
+            </p>
+
+            <p>
+                Professional DSLR camera suitable for photography,
+                events, college projects and travel.
+            </p>
+
+            <div class="features">
+
+                <div>📷 DSLR Camera</div>
+                <div>🔋 Extra Battery</div>
+                <div>🎒 Carry Bag</div>
+                <div>💾 64GB Memory Card</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Rental Box -->
+    <section class="rental-box">
+
+        <h2>Rent This Product</h2>
+
+        <div class="price-display">
+            ₹800 <span>/ day</span>
+        </div>
+
+        <div class="date-row">
+
+            <div>
+                <label>Start Date</label>
+
+                <input
+                    type="date"
+                    id="startDate"
+                    onchange="calculateRental()"
+                >
+            </div>
+
+            <div>
+                <label>End Date</label>
+
+                <input
+                    type="date"
+                    id="endDate"
+                    onchange="calculateRental()"
+                >
+            </div>
+
+        </div>
+
+
+        <div class="availability">
+            <span>●</span>
+            Available for rental
+        </div>
+
+
+        <div class="calculation">
+
+            <div>
+                <span>Rental Days</span>
+                <strong id="rentalDays">0 days</strong>
+            </div>
+
+            <div>
+                <span>Rental Cost</span>
+                <strong id="rentalCost">₹0</strong>
+            </div>
+
+            <div>
+                <span>Security Deposit</span>
+                <strong id="deposit">₹2,000</strong>
+            </div>
+
+            <hr>
+
+            <div class="total">
+                <span>Total</span>
+                <strong id="totalAmount">₹0</strong>
+            </div>
+
+        </div>
+
+
+        <button
+            class="book-btn"
+            onclick="bookProduct()">
+            Book Now
+        </button>
+
+        <button class="book-btn" onclick="bookProduct()">
+    Book Now
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        <span>Rent</span>Ease
+    </div>
+
+    <p>Rent smart. Save money. Live better.</p>
+
+    <p class="copyright">
+        © 2026 RentEase. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="js/details.js"></script>
+
+</body>
+</html>

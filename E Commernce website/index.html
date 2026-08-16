@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RentEase | Rent Anything, Anytime</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- Navbar -->
+<header class="navbar">
+
+    <div class="logo">
+        <span>Rent</span>Ease
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#featured">Featured</a>
+    </nav>
+
+    <div class="nav-buttons">
+
+        <a href="login.html">
+            <button class="login-btn">Login</button>
+        </a>
+
+        <a href="register.html">
+            <button class="signup-btn">Sign Up</button>
+        </a>
+
+    </div>
+
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">SMART & EASY RENTALS</p>
+
+            <h1>
+                Rent What You Need.<br>
+                <span>Save More.</span>
+            </h1>
+
+            <p class="hero-text">
+                Electronics, bikes, books, furniture and event items —
+                find everything you need without buying.
+            </p>
+
+            <!-- Search -->
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="What are you looking for?"
+                >
+
+                <select id="categorySelect">
+                    <option value="">All Categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="bikes">Bikes</option>
+                    <option value="books">Books</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="events">Event Items</option>
+                </select>
+
+                <button onclick="searchProducts()">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <div class="image-card">
+                🏠
+                <h3>Rent Smart</h3>
+                <p>Use more. Own less.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+
+        <div class="section-heading">
+            <p>EXPLORE</p>
+            <h2>Browse Categories</h2>
+            <span>Find the perfect item for your needs</span>
+        </div>
+
+        <div class="category-container">
+
+            <div class="category-card">
+                <div class="category-icon">💻</div>
+                <h3>Electronics</h3>
+                <p>Cameras, laptops & more</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🏍️</div>
+                <h3>Bikes</h3>
+                <p>Ride without buying</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">📚</div>
+                <h3>Books</h3>
+                <p>Academic & general books</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🛋️</div>
+                <h3>Furniture</h3>
+                <p>Furniture for every need</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🎉</div>
+                <h3>Event Items</h3>
+                <p>Party & event essentials</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+
+        <div class="section-heading">
+            <p>SIMPLE PROCESS</p>
+            <h2>How RentEase Works</h2>
+        </div>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">01</div>
+                <h3>Find</h3>
+                <p>Search for the product you need.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">02</div>
+                <h3>Choose Dates</h3>
+                <p>Select your rental start and end dates.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">03</div>
+                <h3>Book</h3>
+                <p>Confirm your rental and enjoy the product.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Featured -->
+    <section class="featured" id="featured">
+
+        <div class="section-heading">
+            <p>POPULAR RENTALS</p>
+            <h2>Featured Items</h2>
+        </div>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <div class="product-image">📷</div>
+                <div class="product-info">
+                    <h3>Canon Camera</h3>
+                    <p>Professional DSLR Camera</p>
+                    <strong>₹800 / day</strong>
+                    <button>View Details</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">💻</div>
+                <div class="product-info">
+                    <h3>MacBook Pro</h3>
+                    <p>Powerful laptop for work</p>
+                    <strong>₹1,200 / day</strong>
+                    <button>View Details</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🏍️</div>
+                <div class="product-info">
+                    <h3>Royal Enfield</h3>
+                    <p>Perfect for weekend trips</p>
+                    <strong>₹900 / day</strong>
+                    <button>View Details</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            <span>Rent</span>Ease
+        </div>
+
+        <p>
+            Rent smart. Save money. Live better.
+        </p>
+
+        <p class="copyright">
+            © 2026 RentEase. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

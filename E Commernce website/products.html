@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RentEase | Products</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span>Rent</span>Ease
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="index.html#categories">Categories</a>
+            <a href="index.html#how-it-works">How It Works</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+
+    </header>
+
+
+    <!-- Page Header -->
+    <section class="products-header">
+
+        <p>RENT WHAT YOU NEED</p>
+
+        <h1>Explore Products</h1>
+
+        <span>
+            Find quality products available for rent at affordable prices.
+        </span>
+
+    </section>
+
+
+    <!-- Products Section -->
+    <main class="products-section">
+
+        <!-- Filter Area -->
+        <div class="filter-bar">
+
+            <div class="search-product">
+
+                <input
+                    type="text"
+                    id="productSearch"
+                    placeholder="Search products..."
+                    onkeyup="filterProducts()"
+                >
+
+            </div>
+
+
+            <div class="filter-buttons">
+
+                <button
+                    class="filter-btn active"
+                    onclick="setCategory('all', this)">
+                    All
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="setCategory('electronics', this)">
+                    💻 Electronics
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="setCategory('bikes', this)">
+                    🏍️ Bikes
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="setCategory('books', this)">
+                    📚 Books
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="setCategory('furniture', this)">
+                    🛋️ Furniture
+                </button>
+
+                <button
+                    class="filter-btn"
+                    onclick="setCategory('events', this)">
+                    🎉 Event Items
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Product Count -->
+        <div class="result-info">
+            <p>
+                Showing <strong id="productCount">10</strong> products
+            </p>
+        </div>
+
+
+        <!-- Product Grid -->
+        <div class="products-grid" id="productsGrid">
+
+
+            <!-- Product 1 -->
+            <div
+                class="product-card"
+                data-category="electronics"
+                data-name="Canon Camera"
+            >
+
+                <div class="product-img">
+                    📷
+                    <span class="available">Available</span>
+                </div>
+
+                <div class="product-details">
+
+                    <small>Electronics</small>
+
+                    <h3>Canon Camera</h3>
+
+                    <p>
+                        Professional DSLR camera for photography.
+                    </p>
+
+                    <div class="price">
+                        ₹800 <span>/ day</span>
+                    </div>
+
+                    <button onclick="viewProduct('Canon Camera')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 2 -->
+            <div
+                class="product-card"
+                data-category="electronics"
+                data-name="MacBook Pro"
+            >
+
+                <div class="product-img">
+                    💻
+                    <span class="available">Available</span>
+                </div>
+
+                <div class="product-details">
+
+                    <small>Electronics</small>
+
+                    <h3>MacBook Pro</h3>
+
+                    <p>
+                        Powerful laptop for work and development.
+                    </p>
+
+                    <div class="price">
+                        ₹1,200 <span>/ day</span>
+                    </div>
+
+                    <button onclick="viewProduct('MacBook Pro')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 3 -->
+            <div
+                class="product-card"
+                data-category="electronics"
+                data-name="Sony PlayStation 5"
+            >
+
+                <div class="product-img">
+                    🎮
+                    <span class="available">Available</span>
+                </div>
+
+                <div class="product-details">
+
+                    <small>Electronics</small>
+
+                    <h3>PlayStation 5</h3>
+
+                    <p>
+                        Gaming console for an amazing experience.
+                    </p>
+
+                    <div class="price">
+                        ₹700 <span>/ day</span>
+                    </div>
+
+                    <button onclick="viewProduct('PlayStation 5')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 4 -->
+            <div
+                class="product-card"
+                data-category="bikes"
+                data-name="Royal Enfield Classic"
+            >
+
+                <div class="product-img">
+                    🏍️
+                    <span class="available">Available</span>
+                </div>
+
+                <div class="product-details">
+
+                    <small>Bikes</small>
+
+                    <h3>Royal Enfield Classic</h3>
+
+                    <p>
+                        Perfect bike for trips and weekend rides.
+                    </p>
+
+                    <div class="price">
+                        ₹900 <span>/ day</span>
+                    </div>
+
+                    <button onclick="viewProduct('Royal Enfield Classic')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 5 -->
+            <div
+                class="product-card"
+                data-category="bikes"
+                data-name="Yamaha MT 15"
+            >
+
+                <div class="product-img">
+                    🏍️
+                    <span class="available">Available</span>
+                </div>
+
+                <div class="product-details">
+
+                    <small>Bikes</small>
+
+                    <h3>Yamaha MT 15</h3>
+
+                    <p>
+                        Stylish and comfortable city bike.
+                    </p>
+
+                    <div class="price">
+                        ₹750 <span>/ day</span>
+                    </div>
+
+                    <button onclick="viewProduct('Yamaha MT 15')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 6 -->
+            <div
+                class="product-card"
+                data-category="books"
+                data-name="Data Structures Book"
+            >
+
+                <div class="product-img">
+                    📚
+                    <span class="available">Available</span>
+                </div>
+
+                <div class="product-details">
+
+                    <small>Books</small>
+
+                    <h3>Data Structures Book</h3>
+
+                    <p>
+                        Complete DSA reference book for students.
+                    </p>
+
+                    <div class="price">
+                        ₹50 <span>/ day</span>
+                    </div>
+
+                    <button onclick="viewProduct('Data Structures Book')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 7 -->
+            <div
+                class="product-card"
+                data-category="books"
+                data-name="Java Programming Book"
+            >
+
+                <div class="product-img">
+                    📖
+                    <span class="available">Available</span>
+                </div>
+
+                <div class="product-details">
+
+                    <small>Books</small>
+
+                    <h3>Java Programming Book</h3>
+
+                    <p>
+                        Learn Java programming from basics to advanced.
+                    </p>
+
+                    <div class="price">
+                        ₹40 <span>/ day</span>
+                    </div>
+
+                    <button onclick="viewProduct('Java Programming Book')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 8 -->
+            <div
+                class="product-card"
+                data-category="furniture"
+                data-name="Study Table"
+            >
+
+                <div class="product-img">
+                    🪑
+                    <span class="available">Available</span>
+                </div>
+
+                <div class="product-details">
+
+                    <small>Furniture</small>
+
+                    <h3>Study Table</h3>
+
+                    <p>
+                        Comfortable table for students and professionals.
+                    </p>
+
+                    <div class="price">
+                        ₹150 <span>/ day</span>
+                    </div>
+
+                    <button onclick="viewProduct('Study Table')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 9 -->
+            <div
+                class="product-card"
+                data-category="furniture"
+                data-name="Office Chair"
+            >
+
+                <div class="product-img">
+                    💺
+                    <span class="available">Available</span>
+                </div>
+
+                <div class="product-details">
+
+                    <small>Furniture</small>
+
+                    <h3>Office Chair</h3>
+
+                    <p>
+                        Ergonomic chair for work and study.
+                    </p>
+
+                    <div class="price">
+                        ₹100 <span>/ day</span>
+                    </div>
+
+                    <button onclick="viewProduct('Office Chair')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 10 -->
+            <div
+                class="product-card"
+                data-category="events"
+                data-name="Party Speaker"
+            >
+
+                <div class="product-img">
+                    🔊
+                    <span class="available">Available</span>
+                </div>
+
+                <div class="product-details">
+
+                    <small>Event Items</small>
+
+                    <h3>Party Speaker</h3>
+
+                    <p>
+                        Powerful speaker for parties and events.
+                    </p>
+
+                    <div class="price">
+                        ₹600 <span>/ day</span>
+                    </div>
+
+                    <button onclick="viewProduct('Party Speaker')">
+                        View Details
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- No Result -->
+        <div id="noResults" class="no-results">
+
+            <div>🔍</div>
+
+            <h2>No products found</h2>
+
+            <p>
+                Try another product or category.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            <span>Rent</span>Ease
+        </div>
+
+        <p>Rent smart. Save money. Live better.</p>
+
+        <p class="copyright">
+            © 2026 RentEase. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="js/products.js"></script>
+
+</body>
+</html>

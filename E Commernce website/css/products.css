@@ -1,0 +1,252 @@
+/* ================= PRODUCTS HEADER ================= */
+
+.products-header {
+    text-align: center;
+    padding: 80px 20px 60px;
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
+}
+
+.products-header p {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.products-header h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.products-header span {
+    color: #64748b;
+}
+
+
+/* ================= PRODUCTS SECTION ================= */
+
+.products-section {
+    padding: 60px 7%;
+}
+
+
+/* ================= FILTER ================= */
+
+.filter-bar {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 30px;
+}
+
+.search-product input {
+    width: 100%;
+    padding: 15px 18px;
+    border: 1px solid #dbe2ea;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.search-product input:focus {
+    border-color: #2563eb;
+}
+
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 10px 17px;
+    border: 1px solid #dbe2ea;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #475569;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+
+/* ================= RESULT ================= */
+
+.result-info {
+    margin-bottom: 25px;
+    color: #64748b;
+}
+
+
+/* ================= PRODUCT GRID ================= */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* ================= PRODUCT CARD ================= */
+
+.product-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.09);
+}
+
+
+.product-img {
+    height: 220px;
+    background: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    position: relative;
+}
+
+
+.available {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #dcfce7;
+    color: #15803d;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.product-details {
+    padding: 23px;
+}
+
+.product-details small {
+    color: #2563eb;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.product-details h3 {
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.product-details p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 42px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 800;
+    color: #172033;
+    margin: 18px 0;
+}
+
+.price span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #64748b;
+}
+
+.product-details button {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.product-details button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ================= NO RESULTS ================= */
+
+.no-results {
+    display: none;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.no-results div {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.no-results h2 {
+    margin-bottom: 8px;
+}
+
+.no-results p {
+    color: #64748b;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .products-header {
+        padding: 60px 20px;
+    }
+
+    .products-header h1 {
+        font-size: 35px;
+    }
+
+    .products-section {
+        padding: 40px 5%;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-buttons {
+        flex-direction: column;
+    }
+
+    .filter-btn {
+        width: 100%;
+    }
+
+}
